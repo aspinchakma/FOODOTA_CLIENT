@@ -1,0 +1,32 @@
+.header_container{
+    box-shadow: 0 7px 21px 0 rgb(0 0 0 / 10%);
+    padding: .8rem;
+}
+
+.log_in_button{
+    background-color: #12a4d9 ;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #12a4d9;
+    padding: .4rem 1rem;
+    border-radius: 5px;
+}
+.log_in_button:hover{
+    background-color: transparent;
+    color: #12a4d9;
+    transition: all .4s ease-in-out;
+}
+
+.log_out_button{
+    background-color: #d72631;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #d72631;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+.log_out_button:hover{
+    background-color: transparent;
+    color: #d72631;
+    transition: all .4s ease-in-out;
+}

@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import './NotFound.css';
 
 const NotFound = () => {
+    const history = useHistory();
+    const handleErrorButton = () => {
+        history.push('/home')
+    }
     return (
         <div>
             <div className="container row mx-auto main_error_container">
@@ -13,7 +17,7 @@ const NotFound = () => {
                     <h4>Foodota</h4>
                     <p>Sorry sir, this page</p>
                     <p>isn't available!</p>
-                    <Link path="/home"><button>VISIT HOME<i className="arrow_sign ms-3 fas fa-arrow-right"></i></button></Link>
+                    <button onClick={handleErrorButton}>VISIT HOME<i className="arrow_sign ms-3 fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Company from '../Company/Company';
+import DeliveryArea from '../DeliveryArea/DeliveryAreac';
 import GetStarted from '../GetStarted/GetStarted';
 import MidBAnner from '../MidBanner/MidBAnner';
 import PopularRestaurant from '../PopularRestaurant/PopularRestaurant';
@@ -11,6 +12,7 @@ const MainHome = () => {
     return (
         <div>
             <Banner></Banner>
+            <DeliveryArea></DeliveryArea>
             <PopularRestaurant></PopularRestaurant>
             <Process></Process>
             <MidBAnner></MidBAnner>

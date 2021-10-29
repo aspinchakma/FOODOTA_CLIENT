@@ -1,0 +1,31 @@
+.footer_container{
+    background-image: url('https://i.ibb.co/dcM05Yj/dots-new.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fdf2f2b9;
+    line-height: 1.2rem;
+}
+.footer_container span{
+    font-weight: 500;
+}
+.footer_min_container img{
+    width: 200px;
+}
+.useful_link_container{
+    line-height: .9rem;
+}
+.useful_link_container p{
+    font-weight: 500;
+    cursor: pointer;
+}
+.useful_link_container p:hover{
+    color: #ffc800;
+}
+.footer_border{
+    height: 1px;
+    background-color: #d8d0d0;
+}
+.copyright{
+    text-align: center;
+    color: #545050;
+}

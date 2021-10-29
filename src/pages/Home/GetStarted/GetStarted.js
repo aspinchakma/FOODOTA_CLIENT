@@ -3,7 +3,7 @@ import './GetStarted.css';
 
 const GetStarted = () => {
     return (
-        <div className="mb-5">
+        <div className="mb-5 main_get_started_container">
             <div className="row container mx-auto getstarted_container">
                 <div className="col-lg-6">
                     <p className="get_started_p">PIZZA DELIVERY</p>

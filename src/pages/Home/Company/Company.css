@@ -1,0 +1,24 @@
+
+
+.company_container h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+    color: #0d1137;
+
+}
+
+.company_container{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.company_container img{
+    width: 95%;
+    opacity: .4;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.company_container img:hover{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: transform .4s ease-out;
+}

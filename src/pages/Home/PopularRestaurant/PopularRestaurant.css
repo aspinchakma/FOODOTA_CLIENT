@@ -1,0 +1,17 @@
+
+.mini_restaurant_header{
+    font-weight: 600;
+    color: #FFCC00;
+}
+.restaurant_header{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.spinner-mini{
+    text-align: center;
+    font-size: 200px;
+}
+.spinner_container{
+    border: 1px solid #e9e9e9;
+}

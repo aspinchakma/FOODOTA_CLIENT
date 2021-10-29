@@ -1,0 +1,15 @@
+.mini_process_container{
+    padding: 10px;
+}
+.mini_process_container > div{
+    border: 2px solid white;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.mini_process_container > div:hover{
+    border: 2px solid #077b8a;
+    transform: translateX(-10px);
+    border-bottom-left-radius: 30px;
+    border-top-right-radius:30px ;
+    transition: all .7s ease-out;
+}

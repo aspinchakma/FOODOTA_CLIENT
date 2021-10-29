@@ -5,22 +5,25 @@ import './Login.css';
 
 
 const Login = () => {
-    const { signInUsingGoogle, setUser, setError } = useCont();
+    const { signInUsingGoogle, setUser, setError, setIsLoading } = useCont();
 
     const location = useLocation();
     const history = useHistory();
     const uri = location.state?.from || '/home';
 
     const handleSignInWithGoogle = () => {
+        setIsLoading(false)
         signInUsingGoogle()
             .then(result => {
                 const user = result.user;
                 setUser(user);
-                history.push(uri)
+                history.push(uri);
+                setIsLoading(true)
             })
             .catch(error => {
                 const errorMessage = error.message;
                 setError(errorMessage)
+                setIsLoading(true)
             })
     }
     return (

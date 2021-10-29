@@ -38,7 +38,7 @@ const Details = () => {
                     </div>
                     <div className="col-lg-6">
                         <h3>{name}</h3>
-                        <Rating name="read-only" value={rating} readOnly />
+                        <Rating name="read-only" value={parseInt(rating)} readOnly />
                         <div className="d-flex align-items-center mini-card-details pt-2">
 
                             <div><img width="60px" src={companyLogo} alt="" /></div>

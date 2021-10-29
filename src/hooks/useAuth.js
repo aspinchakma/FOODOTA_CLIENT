@@ -1,5 +1,5 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import initializationAuthentication from "../utilities/firebase/firebase.init";
 
 const useAuth = () => {
@@ -7,24 +7,31 @@ const useAuth = () => {
 
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
 
     const signInUsingGoogle = () => {
+        setIsLoading(true)
         return signInWithPopup(auth, googleProvider);
 
     }
 
-    onAuthStateChanged(auth, user => {
-        if (user) {
-            setUser(user)
-        }
-        else {
-
-        }
-    })
+    // observer 
+    useEffect(() => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user)
+            }
+            else {
+                setUser({})
+            }
+            setIsLoading(false)
+        });
+        return () => unsubscribed;
+    }, [])
 
     const logOutFromLogin = () => {
         signOut(auth)
@@ -33,7 +40,7 @@ const useAuth = () => {
             }).catch(error => {
                 const errorMessage = error.message;
                 setError(errorMessage)
-            })
+            }).finally(setIsLoading(false))
     }
 
 
@@ -49,6 +56,8 @@ const useAuth = () => {
         error,
         setUser,
         setError,
+        setIsLoading,
+        isLoading,
 
     }
 

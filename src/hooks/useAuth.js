@@ -13,15 +13,8 @@ const useAuth = () => {
 
 
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user;
-                setUser(user)
-            })
-            .catch(error => {
-                const errorMessage = error.message;
-                setError(errorMessage)
-            })
+        return signInWithPopup(auth, googleProvider);
+
     }
 
     onAuthStateChanged(auth, user => {
@@ -54,6 +47,9 @@ const useAuth = () => {
         logOutFromLogin,
         user,
         error,
+        setUser,
+        setError,
+
     }
 
 }

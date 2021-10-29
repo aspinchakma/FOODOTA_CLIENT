@@ -1,11 +1,11 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import useAuth from '../../../hooks/useAuth';
+import useCont from '../../../hooks/useCont';
 import './Header.css';
 
 const Header = () => {
-    const { user, logOutFromLogin } = useAuth();
+    const { user, logOutFromLogin } = useCont()
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" className="header_container">

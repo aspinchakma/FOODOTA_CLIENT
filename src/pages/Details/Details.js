@@ -33,7 +33,7 @@ const Details = () => {
         <>
             {
                 food._id ? <div className="container mx-auto row main_details_container">
-                    <div className="col-lg-6 img_container_details">
+                    <div className="col-lg-6 img_container_details mb-3">
                         <img className="img-fluid" src={img} alt="" />
                     </div>
                     <div className="col-lg-6">

@@ -8,36 +8,40 @@ import Login from './pages/Login/Login';
 import ManageAllOrder from './pages/ManageAllOrder/ManageAllOrder';
 import MyOrder from './pages/MyOrder/MyOrder';
 import NotFound from './pages/NotFound/NotFound'
+import AuthProvider from './utilities/ContexApi/AuthProvider';
+import PrivateRoute from './utilities/firebase/PrivateRoute/PrivateRoute';
 function App() {
   return (
     <div>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <MainHome></MainHome>
-          </Route>
-          <Route path="/home">
-            <MainHome></MainHome>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/myOrder">
-            <MyOrder></MyOrder>
-          </Route>
-          <Route path="/manageAllOrder">
-            <ManageAllOrder></ManageAllOrder>
-          </Route>
-          <Route path="/food/details/:foodId">
-            <Details></Details>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <MainHome></MainHome>
+            </Route>
+            <Route path="/home">
+              <MainHome></MainHome>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/myOrder">
+              <MyOrder></MyOrder>
+            </Route>
+            <Route path="/manageAllOrder">
+              <ManageAllOrder></ManageAllOrder>
+            </Route>
+            <PrivateRoute path="/food/details/:foodId">
+              <Details></Details>
+            </PrivateRoute >
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+
+
+.main_log_in_container{
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+}
+
+.mini_log_in_container{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding-top:3rem ;
+    padding-bottom:4rem ;
+    border-radius: 5px;
+}
+.mini_log_in_container:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translateX(10px);
+    transition: all .4s ease-out;
+}
+
+
+.log_in_method_container{
+    background-color: blue;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+.log_in_method_container img{
+    background-color: white;
+}
+.log_in_method_container button{
+    border: none;
+    background-color: blue;
+    font-weight: 500;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0 2.63rem;
+}
+.log_in_header{
+    color: #b20238;
+    font-weight: 600;
+    font-size: 2.1rem;
+}

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './pages/Common/Footer/Footer';
 import Header from './pages/Common/Header/Header';
+import Details from './pages/Details/Details';
 import MainHome from './pages/Home/MainHome/MainHome';
 import Login from './pages/Login/Login';
 import ManageAllOrder from './pages/ManageAllOrder/ManageAllOrder';
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/manageAllOrder">
             <ManageAllOrder></ManageAllOrder>
+          </Route>
+          <Route path="/food/details/:foodId">
+            <Details></Details>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

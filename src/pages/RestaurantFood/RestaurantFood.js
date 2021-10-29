@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './RestaurantFood.css';
 
 const RestaurantFood = ({ food }) => {
-    const { img, name, companyLogo, location, time, price } = food;
+    const { img, name, companyLogo, location, time, price, _id } = food;
     return (
         <div>
             <div className="col">
@@ -22,7 +23,8 @@ const RestaurantFood = ({ food }) => {
                                 <p className="mt-1"> <i className="map fas fa-map-marked-alt"></i> <span>{location}</span> </p>
                             </div>
                         </div>
-                        <button className="details_button">Details</button>
+                        <Link to={`/food/details/${_id}`}><button className="details_button">Details</button></Link>
+
                     </div>
 
                 </div>

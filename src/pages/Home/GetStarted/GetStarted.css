@@ -1,0 +1,23 @@
+
+
+.get_started_p{
+    color:#ffc800;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.get_started_header{
+    font-size: 40px;
+}
+
+.getstarted_container{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+}
+
+.img_container_get img{
+    border-radius: 50%;
+}
+.getstarted_container:hover .img_container_get img{
+    transform: translateX(10px);
+    transition: all .4s ease-out;
+}

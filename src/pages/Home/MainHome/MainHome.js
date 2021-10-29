@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Company from '../Company/Company';
 import GetStarted from '../GetStarted/GetStarted';
 import MidBAnner from '../MidBanner/MidBAnner';
 import PopularRestaurant from '../PopularRestaurant/PopularRestaurant';
@@ -15,6 +16,7 @@ const MainHome = () => {
             <MidBAnner></MidBAnner>
             <GetStarted></GetStarted>
             <Subscribe></Subscribe>
+            <Company></Company>
         </div>
     );
 };

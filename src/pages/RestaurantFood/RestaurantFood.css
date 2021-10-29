@@ -2,13 +2,12 @@
     border:none;
     cursor: pointer;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border: 2px solid white;
+    border-bottom: 2px solid white;
     overflow: hidden;
+    border-radius: 0;
 }
 .single_card:hover{
-    border-bottom-left-radius: 30px;
-    border-top-right-radius:30px ;
-    border: 2px solid blue;
+    border-bottom: 2px solid blue;
     transition: all .5s ease-out;
 }
 .mini_card_img{
@@ -43,7 +42,6 @@
     background-color: #12a4d9;
     color: white;
     font-weight: 500;
-    border-radius: 5px;
     padding: .4rem 1.3rem;
 }
 .details_button:hover{

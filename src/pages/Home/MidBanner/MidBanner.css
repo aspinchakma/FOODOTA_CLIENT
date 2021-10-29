@@ -1,0 +1,46 @@
+.mid_banner{
+    background-image: url('https://i.ibb.co/N18K2rw/promo-11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top:8rem ;
+    padding-bottom:9rem ;
+}
+.mid_banner_p{
+    font-weight: 600;
+    color: #FFCC00;
+    font-size: 1.4rem;
+}
+.midBanner_main_header{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+.read_more{
+    background-color: #FFCC00;
+    padding:13px 25px;
+    border: none;
+    font-weight: 500;
+
+}
+.read_more:hover{
+    background-color:#231900;
+    color: white;
+    transition: all .5s ease-out;
+}
+.search_button{
+    font-weight: 600;
+    background-color: #231900;
+    color: white;
+    padding:13px 25px;
+    border: none;
+
+}
+.search_button:hover{
+    background-color:#FFCC00;
+    color: black;
+    transition: all .5s ease-out;
+}
+.mid_banner_p_main{
+    font-size: 1.1rem;
+    font-weight: 400;
+}

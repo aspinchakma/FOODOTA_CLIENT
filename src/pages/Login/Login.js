@@ -12,18 +12,18 @@ const Login = () => {
     const uri = location.state?.from || '/home';
 
     const handleSignInWithGoogle = () => {
-        setIsLoading(false)
+        setIsLoading(true)
         signInUsingGoogle()
             .then(result => {
                 const user = result.user;
                 setUser(user);
                 history.push(uri);
-                setIsLoading(true)
+                setIsLoading(false)
             })
             .catch(error => {
                 const errorMessage = error.message;
                 setError(errorMessage)
-                setIsLoading(true)
+                setIsLoading(false)
             })
     }
     return (

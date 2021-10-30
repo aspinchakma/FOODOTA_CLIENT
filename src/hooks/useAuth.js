@@ -14,7 +14,6 @@ const useAuth = () => {
 
 
     const signInUsingGoogle = () => {
-        setIsLoading(true)
         return signInWithPopup(auth, googleProvider);
 
     }

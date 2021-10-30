@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import Rating from '@mui/material/Rating';
 import './Details.css';
+import useCont from '../../hooks/useCont';
+import axios from 'axios';
 
 
 const Details = () => {
@@ -10,6 +12,8 @@ const Details = () => {
 
     const [food, setFood] = useState({});
     const [quantity, setQuantity] = useState(1);
+
+    const { user } = useCont();
 
     const { name, img, description, price, location, time, rating, companyLogo } = food;
 
@@ -28,6 +32,28 @@ const Details = () => {
             setQuantity(quantity - 1)
         }
 
+    }
+
+    const handlePlaceOrder = (food, email) => {
+        food.quantity = quantity;
+
+        const order = {
+            email,
+            food,
+        }
+
+        // post using by axios 
+        axios.post('http://localhost:5000/food/order', order)
+            .then(function (response) {
+
+                if (response.data.acknowledged) {
+                    alert(`Your order ${name} successfully added.`);
+                    setQuantity(1)
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
     return (
         <>
@@ -64,7 +90,7 @@ const Details = () => {
                                 <button onClick={handleIncrease}>
                                     +
                                 </button></div>
-                            <button className="place_order_button">Place Order</button>
+                            <button onClick={() => handlePlaceOrder(food, user.email)} className="place_order_button">Place Order</button>
                         </div>
                     </div>
                 </div>

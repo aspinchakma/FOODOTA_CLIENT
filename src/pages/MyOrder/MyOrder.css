@@ -1,0 +1,21 @@
+.my_order_container{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+}
+.delete_icon{
+    color: red;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+.order_items{
+    font-weight: 500;
+}
+.empty_order{
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    color: orange;
+    font-weight: 500;
+}

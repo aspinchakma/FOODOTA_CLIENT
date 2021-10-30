@@ -1,0 +1,21 @@
+.main_add_item_container{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.main_add_item_header span{
+    background-color: #5c3c92;
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    padding: 9px 18px;
+    border: 1px solid #5c3c92;
+    cursor: pointer;
+}
+.main_add_item_header .header {
+    background-color: #077b8a;
+    border: 1px solid #077b8a;
+}
+.main_add_item_container span:first-child{
+    margin-right: 10px;
+}

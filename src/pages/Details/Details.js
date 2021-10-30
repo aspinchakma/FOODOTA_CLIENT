@@ -36,6 +36,7 @@ const Details = () => {
 
     const handlePlaceOrder = (food, email) => {
         food.quantity = quantity;
+        food.status = "Pending";
 
         const order = {
             email,

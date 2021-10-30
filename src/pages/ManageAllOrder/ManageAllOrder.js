@@ -6,6 +6,7 @@ import './ManageOrder.css';
 
 const ManageAllOrder = () => {
     const [allItem, setAllItem] = useState([]);
+
     const { user } = useCont();
     useEffect(() => {
         fetch('http://localhost:5000/manageAll')
@@ -37,6 +38,26 @@ const ManageAllOrder = () => {
                 })
         }
     }
+    const handleStatus = id => {
+        console.log(id)
+        fetch('http://localhost:5000/food/status', {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(
+                {
+                    id: id
+                }
+            )
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    alert('Successfully Approved');
+                }
+            })
+    }
 
     return (
         <div>
@@ -54,14 +75,17 @@ const ManageAllOrder = () => {
                                 <thead>
                                     <tr>
                                         <th>Email</th>
+                                        <th>status</th>
                                         <th>Item Name</th>
                                         <th>Total Price</th>
+                                        <th>U. Status</th>
                                         <th>Manage</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
                                         allItem?.map(order => <ManageSingle key={order._id}
+                                            handleStatus={handleStatus}
                                             handleDeleteManageItems={handleDeleteManageItems}
                                             order={order}></ManageSingle>)
                                     }

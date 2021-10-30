@@ -10,6 +10,7 @@ import MyOrder from './pages/MyOrder/MyOrder';
 import NotFound from './pages/NotFound/NotFound'
 import AuthProvider from './utilities/ContexApi/AuthProvider';
 import PrivateRoute from './utilities/firebase/PrivateRoute/PrivateRoute';
+import AddNewItem from './pages/AddNewItems/AddNewItem';
 function App() {
   return (
     <div>
@@ -35,6 +36,9 @@ function App() {
             <PrivateRoute path="/food/details/:foodId">
               <Details></Details>
             </PrivateRoute >
+            <PrivateRoute path="/add">
+              <AddNewItem></AddNewItem>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

@@ -1,0 +1,42 @@
+
+.common_input_field{
+    width: 100%;
+    padding: 8px 15px;
+}
+.mini_form_container textarea{
+    width: 100%;
+    padding: 8px 15px;
+}
+.single_form_container p{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.upload_img_file{
+    padding-left: 0px;
+}
+.add_restaurant_button{
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 7px 28px;
+    background-color: brown;
+    color: white;
+    border: 1px solid brown;
+    border-radius: 3px;
+}
+.add_restaurant_button:hover{
+    background-color: white;
+    color: brown;
+    transition: all .3s ease-out;
+}
+.add_food_button_container{
+    text-align: center;
+}
+.update_button{
+    background-color: red;
+    border: none;
+    color: white;
+
+}
+.updated_message{
+    font-weight:500;
+}

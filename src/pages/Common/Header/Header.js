@@ -14,7 +14,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
-                            {user.email && <Nav.Link as={NavLink} to={`/myOrder/${user.email}`}>My Order</Nav.Link>}
+                            {user.email && <Nav.Link as={NavLink} to={`/myOrder`}>My Order</Nav.Link>}
                             {user.email && <Nav.Link as={NavLink} to="/manageAllOrder">Manage All Order</Nav.Link>}
                             {
                                 user.email && <Navbar.Text>

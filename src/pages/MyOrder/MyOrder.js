@@ -10,7 +10,7 @@ const MyOrder = () => {
     const [myOrder, setMyOrder] = useState([]);
     const { user } = useCont();
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${email}`)
+        fetch(`http://localhost:5000/myOrder/${user.email}`)
             .then(response => response.json())
             .then(data => setMyOrder(data))
     }, []);

@@ -9,7 +9,7 @@ const ManageAllOrder = () => {
 
     const { user } = useCont();
     useEffect(() => {
-        fetch('http://localhost:5000/manageAll')
+        fetch('https://calm-sea-46897.herokuapp.com/manageAll')
             .then(res => res.json())
             .then(data => setAllItem(data))
     }, []);
@@ -17,7 +17,7 @@ const ManageAllOrder = () => {
         console.log(id);
         const confirmMessage = window.confirm('Are you sure , delete this item ?');
         if (confirmMessage) {
-            fetch('http://localhost:5000/manageAll/deleteDetails', {
+            fetch('https://calm-sea-46897.herokuapp.com/manageAll/deleteDetails', {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json',
@@ -40,7 +40,7 @@ const ManageAllOrder = () => {
     }
     const handleStatus = id => {
         console.log(id)
-        fetch('http://localhost:5000/food/status', {
+        fetch('https://calm-sea-46897.herokuapp.com/food/status', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

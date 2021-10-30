@@ -19,7 +19,7 @@ const Details = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/food/details/${foodId}`)
+        fetch(`https://calm-sea-46897.herokuapp.com/food/details/${foodId}`)
             .then(res => res.json())
             .then(data => setFood(data))
     }, []);
@@ -44,7 +44,7 @@ const Details = () => {
         }
 
         // post using by axios 
-        axios.post('http://localhost:5000/food/order', order)
+        axios.post('https://calm-sea-46897.herokuapp.com/food/order', order)
             .then(function (response) {
 
                 if (response.data.acknowledged) {

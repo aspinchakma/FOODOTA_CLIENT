@@ -6,7 +6,7 @@ import './PopularRestaurant.css';
 const PopularRestaurant = () => {
     const [restaurantFood, setRestaurantFood] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/foods')
+        fetch('https://calm-sea-46897.herokuapp.com/foods')
             .then(res => res.json())
             .then(data => setRestaurantFood(data))
     }, [])

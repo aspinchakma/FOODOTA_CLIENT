@@ -8,14 +8,14 @@ const MyOrder = () => {
     const [myOrder, setMyOrder] = useState([]);
     const { user } = useCont();
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user.email}`)
+        fetch(`https://calm-sea-46897.herokuapp.com/myOrder/${user.email}`)
             .then(response => response.json())
             .then(data => setMyOrder(data))
     }, []);
     const handleDelete = (id) => {
         const confirmMessage = window.confirm("Are You sure delete this item ?");
         if (confirmMessage) {
-            fetch('http://localhost:5000/myOrder/deleteDetail', {
+            fetch('https://calm-sea-46897.herokuapp.com/myOrder/deleteDetail', {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json',
@@ -56,7 +56,7 @@ const MyOrder = () => {
                                         <th>Status</th>
                                         <th>Quantity</th>
                                         <th>Total Price</th>
-                                        
+
                                         <th>Manage</th>
                                     </tr>
                                 </thead>

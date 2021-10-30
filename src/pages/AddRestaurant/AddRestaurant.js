@@ -6,7 +6,7 @@ import './AddRestaurant.css';
 const AddRestaurant = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/add/sellMeal', data)
+        axios.post('https://calm-sea-46897.herokuapp.com/add/sellMeal', data)
             .then(res => {
                 // const { data } = res;
                 // console.log(res.data.insertedId)
@@ -26,29 +26,29 @@ const AddRestaurant = () => {
                 <div className="row mini_form_container">
                     <div className="col-lg-6 single_form_container p-4">
                         <p>Title</p>
-                        <input className="common_input_field"  {...register("name")} placeholder="Title" />
+                        <input className="common_input_field"  {...register("name")} placeholder="Title" required />
                         <p>Description</p>
 
-                        <textarea {...register("description")} placeholder="Description" />
+                        <textarea {...register("description")} placeholder="Description" required />
                         <p>Price</p>
-                        <input className="common_input_field" type="number" {...register("price")} placeholder="Price" />
+                        <input className="common_input_field" type="number" {...register("price")} placeholder="Price" required />
                         <p>Banner Image Link</p>
-                        <input className="common_input_field" {...register("img")} placeholder="banner image link" />
+                        <input className="common_input_field" {...register("img")} placeholder="banner image link" required />
                     </div>
                     <div className="col-lg-6 single_form_container p-4">
                         <p>Rating</p>
-                        <input className="common_input_field mb-2" type="number" {...register("rating")} placeholder="Rating" />
+                        <input className="common_input_field mb-2" type="number" {...register("rating")} placeholder="Rating" required />
                         <p>Location</p>
-                        <input className="common_input_field mb-2" {...register("location")} placeholder="Location" />
+                        <input className="common_input_field mb-2" {...register("location")} placeholder="Location" required />
                         <p>Available Time</p>
-                        <input className="common_input_field mb-2" {...register("time")} placeholder="Open Time to close time" />
+                        <input className="common_input_field mb-2" {...register("time")} placeholder="Open Time to close time" required />
 
                         <p>Company Logo Link</p>
-                        <input className="common_input_field" {...register("companyLogo")} placeholder="Company Logo link" />
+                        <input className="common_input_field" {...register("companyLogo")} placeholder="Company Logo link" required />
                     </div>
                 </div>
                 <div className="add_food_button_container">
-                    <input className="add_restaurant_button" type="submit" value="Sell Food" />
+                    <input className="add_restaurant_button" type="submit" value="Sell Food" required />
                 </div>
             </form>
         </div>

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Table } from 'react-bootstrap';
-import { useParams } from 'react-router';
 import useCont from '../../hooks/useCont';
 import OrderItems from '../OrderItems/OrderItems';
 import './MyOrder.css'
 
 const MyOrder = () => {
-    const { email } = useParams();
     const [myOrder, setMyOrder] = useState([]);
     const { user } = useCont();
     useEffect(() => {
@@ -14,6 +12,31 @@ const MyOrder = () => {
             .then(response => response.json())
             .then(data => setMyOrder(data))
     }, []);
+    const handleDelete = (id) => {
+        const confirmMessage = window.confirm("Are You sure delete this item ?");
+        if (confirmMessage) {
+            fetch('http://localhost:5000/myOrder/deleteDetail', {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(
+                    {
+                        email: user.email,
+                        id: id
+                    }
+                )
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Delete successfully');
+                        const remainItems = myOrder.filter(item => item._id !== id);
+                        setMyOrder(remainItems)
+                    }
+                })
+        }
+    }
     return (
         <div className="main_order_container">
             <div className="my_order_container container mx-auto">
@@ -37,7 +60,9 @@ const MyOrder = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        myOrder?.map(order => <OrderItems key={order._id} order={order}></OrderItems>)
+                                        myOrder?.map(order => <OrderItems key={order._id}
+                                            handleDelete={handleDelete}
+                                            order={order}></OrderItems>)
                                     }
                                 </tbody>
                             </Table>

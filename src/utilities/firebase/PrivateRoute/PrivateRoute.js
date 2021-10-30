@@ -6,14 +6,12 @@ import useCont from '../../../hooks/useCont';
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useCont();
 
-    console.log(isLoading, user.email)
 
     if (isLoading) {
         return <div className="spinner-mini py-5">
             <Spinner className=" my-5" animation="border" variant="info" />
         </div>
     }
-    console.log(isLoading)
     return (
         <div>
             <Route

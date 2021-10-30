@@ -52,7 +52,6 @@ const Details = () => {
                 }
             })
             .catch(function (error) {
-                console.log(error);
             });
     }
     return (

@@ -38,6 +38,9 @@ const ManageAllOrder = () => {
                 })
         }
     }
+
+    // update fo status
+
     const handleStatus = id => {
         console.log(id)
         fetch('https://calm-sea-46897.herokuapp.com/food/status', {
@@ -77,6 +80,7 @@ const ManageAllOrder = () => {
                                         <th>Email</th>
                                         <th>status</th>
                                         <th>Item Name</th>
+                                        <th>Quantity</th>
                                         <th>Total Price</th>
                                         <th>U. Status</th>
                                         <th>Manage</th>

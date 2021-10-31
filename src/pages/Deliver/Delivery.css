@@ -1,0 +1,25 @@
+.main-deliver-container{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+
+
+.deliver_register{
+    background-color: black;
+    padding: 8px 14px;
+    color: white;
+    font-weight: 500;
+    border: 1px solid black;
+}
+.register_image_container img{
+    width: 90%;
+}
+.deliver_register:hover{
+    background-color: white;
+    color: black;
+    transform: translateY(-5px);
+    transition: all .3s ease-out;
+}

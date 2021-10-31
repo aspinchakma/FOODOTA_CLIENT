@@ -10,10 +10,12 @@ const AddNewItem = () => {
     const handleAddRest = () => setIsRest(false);
     return (
         <div className="container main_add_item_container py-4">
+
+            {/* just change name add blog to registration for deliver .... */}
             <div className="text-center">
                 <h3 className="main_add_item_header mb-4">
-                    <span className={isRest ? 'header' : ''} onClick={handleAddPost}>Add Blog</span>
-                    <span className={!isRest ? 'header' : ''} onClick={handleAddRest}>Sell Meal</span> </h3>
+                    <span className={isRest ? 'header' : ''} onClick={handleAddPost}>Register for Deliver</span><br />
+                    <span className={!isRest ? 'header' : ''} onClick={handleAddRest}>Add Restaurant With Meal</span> </h3>
             </div>
             <div>
                 {

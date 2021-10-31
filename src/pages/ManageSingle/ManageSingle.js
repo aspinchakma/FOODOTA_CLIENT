@@ -11,6 +11,7 @@ const ManageSingle = ({ order, handleDeleteManageItems, handleStatus }) => {
             <td className="order_items">{email}</td>
             <td className="order_items">{status}</td>
             <td className="order_items">{name}</td>
+            <td className="order_items">{quantity}</td>
             <td className="order_items">${quantity * price}</td>
             {
                 status.length === 7 ? <td className="order_items"><button onClick={() => handleStatus(_id)} className="update_button">update</button></td> :

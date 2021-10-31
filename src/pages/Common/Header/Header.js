@@ -16,17 +16,25 @@ const Header = () => {
                         <Nav className="ms-auto">
                             {user.email && <Nav.Link as={NavLink} to={`/myOrder`}>My Order</Nav.Link>}
                             {user.email && <Nav.Link as={NavLink} to="/manageAllOrder">Manage All Order</Nav.Link>}
+
+
+
+                        </Nav>
+                        <Nav>
+                            <Nav.Link as={NavLink} to={`/aboutUs`}>About Us</Nav.Link>
+                            <Nav.Link as={NavLink} to={`/deliver`}>Deliver With Foodota</Nav.Link>
+                        </Nav>
+                        <Nav>
+
                             {user.email && <Nav.Link as={NavLink} to="/add">Add <i className="fas fa-plus"></i></Nav.Link>}
                             {
                                 user.email && <Navbar.Text>
                                     Hello, <span>{user.displayName}</span>
                                 </Navbar.Text>
                             }
-
-
-
                         </Nav>
                         <Nav>
+
                             {
                                 user.email ? <Nav.Link><button
                                     onClick={logOutFromLogin}
@@ -42,6 +50,7 @@ const Header = () => {
 
 
                         </Nav>
+
 
 
                     </Navbar.Collapse>
